@@ -22,7 +22,7 @@
       "name": "Thanasis Polychronakis",
       "url": "http://thanpol.as"
     }
-  ]
+  ],
   "main": "tasks/grunt_tasks.js",
   "engines": {
     "node": ">= 0.8.0"
