@@ -5,7 +5,8 @@
 
 var helpers = require('grunt-ss-helpers'),
     assets  = require('../lib/asset-pipeline'),
-    path         = require('path');
+    path         = require('path'),
+    when     = require('when');
 
 module.exports = function(grunt) {
 
@@ -28,11 +29,18 @@ module.exports = function(grunt) {
     }
   };
   grunt.registerMultiTask('assets' , function() {
+    var done = this.async();
+
     var options = this.options();
     var target = this.target;
+
+    var def = when.defer();
+
     this.files.forEach( function(file) {
-      assets.run(file, options, target);
+      when.chain( assets.run(file, options, target), def.resolver);
     });
+
+    def.then(done);
   });
 
 };

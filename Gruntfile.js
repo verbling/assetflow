@@ -25,9 +25,11 @@ module.exports = function( grunt ) {
 
     assets: {
       options: {
+        debug: true,
+        truncateHash: 8
       },
       targetName: {
-        src: ['./**/*.js', '!./node_modules/**/*.js'],
+        src: ['./**/*.js', '!./node_modules/**/*.js', '!./temp/**/*.js'],
         dest: 'temp/out'
       }
     },
