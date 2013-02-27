@@ -3,22 +3,40 @@
  * node-asset-pipeline
  * https://github.com/thanpolas/node-asset-pipeline
  *
- * Copyright (c) 2013 Thanasis Polychronakis
+ * Copyright (c) 2013 Verbling
  * Licensed under the MIT license.
  */
 
+var gruntAssets = require('./tasks/grunt-asset-pipeline');
 
 module.exports = function( grunt ) {
   'use strict';
 
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
-  var externsPath = 'build/externs/';
+  gruntAssets(grunt);
 
   //
   // Grunt configuration:
   //
   //
   grunt.initConfig({
+
+
+    assets: {
+      targetName: {
+        src: ['./**/*.js', '!./node_modules/**/*.js'],
+        dest: '.'
+      }
+    },
+
+    watch: {
+      test: {
+        files: ['./**/*.js'],
+        tasks: ['assets']
+      }
+    },
+
     /**
      * TESTING
      *
