@@ -5,7 +5,7 @@
 
 var helpers = require('grunt-ss-helpers'),
     assets  = require('../lib/asset-pipeline'),
-    path         = require('path'),
+    taskReplace = require('./asset-replace'),
     when     = require('when');
 
 module.exports = function(grunt) {
@@ -42,5 +42,8 @@ module.exports = function(grunt) {
 
     def.then(done);
   });
+
+  // initialize rest of the tasks
+  taskReplace(grunt);
 
 };

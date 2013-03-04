@@ -7,7 +7,7 @@
  * Licensed under the MIT license.
  */
 
-var gruntAssets = require('./tasks/grunt-asset-pipeline');
+var gruntAssets = require('./tasks/asset-pipeline');
 
 module.exports = function( grunt ) {
   'use strict';
@@ -35,18 +35,22 @@ module.exports = function( grunt ) {
     },
 
     assetsReplace: {
+      options: {
+        manifest: 'temp/manifest.json'
+      },
       lessFiles: {
         options: {
           key: '__ASSET(%)'
         },
-        src: ['test/case/**/*.less'],
-        dest: 'temp/replace-out'
+        files: {
+          'temp/replace-out': ['test/case/**/*.less']
+        }
       }
     },
 
     watch: {
       test: {
-        files: ['./**/*.js'],
+        files: ['*.js', 'lib/**/*.js', 'tasks/**/*.js'],
         tasks: ['assetsReplace']
       }
     },
