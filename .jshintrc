@@ -61,7 +61,7 @@
   "globalstrict": false,
   "strict": false,
 
-  "es5": true,
+  "es5": true
 
   /**
    * TEMPORARY OPTIONS
@@ -77,6 +77,5 @@
    * ================
    *
    */
-  "predef": [
-  ]
+
 }

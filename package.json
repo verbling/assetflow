@@ -33,7 +33,7 @@
   "dependencies": {
     "when": "~1.8.1",
     "grunt": "~0.4.0",
-    "grunt-ss-helpers": "0.0.1",
+    "grunt-ss-helpers": "0.0.2",
     "collections": "~0.1.15"
   },
   "devDependencies": {
