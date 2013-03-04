@@ -5,9 +5,12 @@
 This package distributable, includes parts or fragments of the following packages:
 
 
-## Included in the repository
+## Included or used in the repository
 
-This repository, includes the following packages:
+This repository, includes or makes use of the following packages:
+
+* **Grunt String Replace** by Erick Ruiz de Chavez
+
 
 ## Required for development
 
@@ -16,6 +19,15 @@ Development for this package requires the use of the following packages that are
 
 ## The licenses
 Here are the licenses of the packages included.
+
+### Grunt String Replace
+/*
+ * grunt-string-replace
+ * https://github.com/erickrdch/grunt-string-replace
+ *
+ * Copyright (c) 2012 Erick Ruiz de Chavez
+ * Licensed under the MIT license.
+ */
 
 ### Sinon
 

@@ -34,10 +34,20 @@ module.exports = function( grunt ) {
       }
     },
 
+    assetsReplace: {
+      lessFiles: {
+        options: {
+          key: '__ASSET(%)'
+        },
+        src: ['test/case/**/*.less'],
+        dest: 'temp/replace-out'
+      }
+    },
+
     watch: {
       test: {
         files: ['./**/*.js'],
-        tasks: ['assets']
+        tasks: ['assetsReplace']
       }
     },
 
