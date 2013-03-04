@@ -22,11 +22,11 @@ module.exports = function( grunt ) {
   //
   grunt.initConfig({
 
-
     assets: {
       options: {
         debug: true,
-        truncateHash: 8
+        truncateHash: 8,
+        manifest: 'temp/manifest.json'
       },
       targetName: {
         src: ['./**/*.js', '!./node_modules/**/*.js', '!./temp/**/*.js'],
