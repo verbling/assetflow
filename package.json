@@ -1,7 +1,7 @@
 {
   "name": "node-asset-pipeline",
   "description": "Asset pipeline ala rails for node",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "https://github.com/thanpolas/node-asset-pipeline",
   "author": "Verbling",
   "repository": {
@@ -35,7 +35,7 @@
     "grunt": "~0.4.0",
     "grunt-ss-helpers": "0.0.2",
     "collections": "~0.1.15",
-    "grunt-string-replace": "~0.2.1",
+    "grunt-string-replace": "https://github.com/thanpolas/grunt-string-replace/tarball/7e6087974025bb5067f579f1124da493fce3527a",
     "regexp-quote": "0.0.0"
   },
   "devDependencies": {

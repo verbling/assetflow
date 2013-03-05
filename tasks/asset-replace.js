@@ -3,7 +3,6 @@
  *
  */
 var assetsReplace  = require('../lib/asset-replace');
-
 module.exports = function(grunt) {
 
   grunt.registerMultiTask('assetsReplace' , function() {
