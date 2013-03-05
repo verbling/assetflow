@@ -26,7 +26,8 @@ module.exports = function( grunt ) {
       options: {
         debug: true,
         truncateHash: 8,
-        manifest: 'temp/manifest.json'
+        manifest: 'temp/manifest.json',
+        cdnurl: 'http://s3.aws.com/'
       },
       targetName: {
         src: ['./**/*.js', '!./node_modules/**/*.js', '!./temp/**/*.js'],
@@ -43,7 +44,7 @@ module.exports = function( grunt ) {
           key: '__ASSET(%)'
         },
         files: {
-          'temp/replace-out': ['test/case/**/*.less']
+          'temp/replace-out/': ['test/case/**/*.less']
         }
       }
     },
@@ -51,7 +52,7 @@ module.exports = function( grunt ) {
     watch: {
       test: {
         files: ['*.js', 'lib/**/*.js', 'tasks/**/*.js'],
-        tasks: ['assetsReplace']
+        tasks: ['assets']
       }
     },
 

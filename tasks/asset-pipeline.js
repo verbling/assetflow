@@ -5,8 +5,7 @@
 
 var helpers = require('grunt-ss-helpers'),
     assets  = require('../lib/asset-pipeline'),
-    taskReplace = require('./asset-replace'),
-    when     = require('when');
+    taskReplace = require('./asset-replace');
 
 module.exports = function(grunt) {
 
@@ -34,13 +33,12 @@ module.exports = function(grunt) {
     var options = this.options();
     var target = this.target;
 
-    var def = when.defer();
+    assets.run(this.files, options, target)
+      .then(done)
+      .otherwise(function(){
+        done(false);
+      });
 
-    this.files.forEach( function(file) {
-      when.chain( assets.run(file, options, target), def.resolver);
-    });
-
-    def.then(done);
   });
 
   // initialize rest of the tasks
