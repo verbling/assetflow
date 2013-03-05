@@ -1,7 +1,7 @@
 {
   "name": "node-asset-pipeline",
   "description": "Asset pipeline ala rails for node",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/thanpolas/node-asset-pipeline",
   "author": "Verbling",
   "repository": {
@@ -23,7 +23,7 @@
       "url": "http://thanpol.as"
     }
   ],
-  "main": "tasks/grunt_tasks.js",
+  "main": "tasks/asset-pipeline.js",
   "engines": {
     "node": ">= 0.8.0"
   },
