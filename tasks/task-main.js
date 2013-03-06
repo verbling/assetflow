@@ -5,7 +5,8 @@
 
 var helpers = require('grunt-ss-helpers'),
     assets  = require('../lib/asset-pipeline'),
-    taskReplace = require('./asset-replace');
+    taskReplace = require('./task-replace'),
+    taskS3stat = require('./task-s3-stat.js');
 
 module.exports = function(grunt) {
 
@@ -13,7 +14,8 @@ module.exports = function(grunt) {
   if ('object' !== typeof(grunt)) {
     return {
       helpers: helpers,
-      assets: assets
+      assets: assets,
+      replace: taskReplace
     };
   }
 
@@ -43,5 +45,5 @@ module.exports = function(grunt) {
 
   // initialize rest of the tasks
   taskReplace(grunt);
-
+  taskS3stat(grunt);
 };

@@ -7,12 +7,14 @@
  * Licensed under the MIT license.
  */
 
-var gruntAssets = require('./tasks/asset-pipeline');
+var config = require('config'),
+    gruntAssets = require('./tasks/task-main');
 
 module.exports = function( grunt ) {
   'use strict';
 
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-s3');
   gruntAssets(grunt);
 
   //
@@ -23,14 +25,15 @@ module.exports = function( grunt ) {
 
     assets: {
       options: {
-        debug: true,
+        debug: false,
         truncateHash: 8,
         manifest: 'temp/manifest.json',
-        cdnurl: 'http://s3.aws.com/'
+        cdnurl: 'http://s3.aws.com/',
+        maxOperations: 0
       },
       targetName: {
         src: ['./**/*.js', '!./node_modules/**/*.js', '!./temp/**/*.js'],
-        dest: 'temp/out'
+        dest: 'temp/assets'
       }
     },
 
@@ -48,12 +51,67 @@ module.exports = function( grunt ) {
       }
     },
 
+    assetsS3: {
+      options: {
+        debug: true,
+        checkS3Head: true,
+        manifest: 'temp/manifest.json',
+        key: config.aws_key,
+        secret: config.aws_secret,
+        bucket: config.aws_static_bucket,
+        access: 'public-read'
+      },
+      // Files to be uploaded.
+      target: {
+        // These options override the defaults
+        options: {
+          maxOperations: 2
+        },
+        upload: {
+          src: 'temp/assets/**',
+          dest:  'v/',
+          rel: 'temp/assets',
+          gzip: true,
+          gzipExclude: ['.jpeg', '.jpg', '.png', '.gif', '.less', '.mp3',
+              '.mp4', '.mkv', '.webm', '.gz'],
+          headers: {'Cache-Control': 'max-age=31536000, public'}
+        }
+      }
+    },
+
     watch: {
       test: {
         files: ['*.js', 'lib/**/*.js', 'tasks/**/*.js'],
-        tasks: ['assets']
+        tasks: [
+        //'assets',
+        'assetsS3'
+        ]
       }
     },
+
+    s3: {
+      options: {
+        key: config.aws_key,
+        secret: config.aws_secret,
+        bucket: config.aws_static_bucket,
+        access: 'public-read',
+        maxOperations: 100
+      },
+
+      // Files to be uploaded.
+      dev: {
+        upload: [
+          {
+            src: 'temp/assets/**',
+            dest:  'v/',
+            rel: 'temp/assets',
+            headers: {'Cache-Control': 'max-age=31536000, public'}
+          }
+        ]
+      }
+    },
+
+
 
     /**
      * TESTING
