@@ -54,7 +54,7 @@ module.exports = function( grunt ) {
     assetsS3: {
       options: {
         debug: false,
-        checkS3Head: true,
+        checkS3Head: false,
         manifest: 'temp/manifest.json',
         key: config.aws_key,
         secret: config.aws_secret,
