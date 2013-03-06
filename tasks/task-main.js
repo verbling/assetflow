@@ -37,7 +37,8 @@ module.exports = function(grunt) {
 
     assets.run(this.files, options, target)
       .then(done)
-      .otherwise(function(){
+      .otherwise(function(err){
+        helpers.log.error(err);
         done(false);
       });
 

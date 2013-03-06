@@ -32,7 +32,7 @@ module.exports = function( grunt ) {
         maxOperations: 0
       },
       targetName: {
-        src: ['./**/*.js', '!./node_modules/**/*.js', '!./temp/**/*.js'],
+        src: ['lib/asset-pipeline.js', '!./node_modules/**/*.js', '!./temp/**/*.js'],
         dest: 'temp/assets'
       }
     },
@@ -53,7 +53,7 @@ module.exports = function( grunt ) {
 
     assetsS3: {
       options: {
-        debug: true,
+        debug: false,
         checkS3Head: true,
         manifest: 'temp/manifest.json',
         key: config.aws_key,
@@ -65,11 +65,11 @@ module.exports = function( grunt ) {
       target: {
         // These options override the defaults
         options: {
-          maxOperations: 2
+          maxOperations: 0
         },
         upload: {
           src: 'temp/assets/**',
-          dest:  'v/',
+          dest:  'testdelete/',
           rel: 'temp/assets',
           gzip: true,
           gzipExclude: ['.jpeg', '.jpg', '.png', '.gif', '.less', '.mp3',
@@ -83,7 +83,7 @@ module.exports = function( grunt ) {
       test: {
         files: ['*.js', 'lib/**/*.js', 'tasks/**/*.js'],
         tasks: [
-        //'assets',
+        'assets',
         'assetsS3'
         ]
       }
