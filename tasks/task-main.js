@@ -2,10 +2,10 @@
  * The bootstrap grunt file and library API exported
  *
  */
-
 var helpers = require('grunt-ss-helpers'),
     assets  = require('../lib/asset-pipeline'),
     taskReplace = require('./task-replace'),
+    nodeHelper = require('../lib/asset-node-helper'),
     taskS3stat = require('./task-s3-stat.js');
 
 module.exports = function(grunt) {
@@ -15,7 +15,9 @@ module.exports = function(grunt) {
     return {
       helpers: helpers,
       assets: assets,
-      replace: taskReplace
+      replace: taskReplace,
+      config: nodeHelper.config,
+      asset: nodeHelper.asset
     };
   }
 
