@@ -29,7 +29,8 @@ module.exports = function( grunt ) {
         truncateHash: 8,
         manifest: 'temp/manifest.json',
         cdnurl: 'http://s3.aws.com/',
-        maxOperations: 0
+        maxOperations: 0,
+        progress: true
       },
       targetName: {
         src: ['lib/asset-pipeline.js', '!./node_modules/**/*.js', '!./temp/**/*.js'],
@@ -59,7 +60,8 @@ module.exports = function( grunt ) {
         key: config.aws_key,
         secret: config.aws_secret,
         bucket: config.aws_static_bucket,
-        access: 'public-read'
+        access: 'public-read',
+        progress: true
       },
       // Files to be uploaded.
       target: {
