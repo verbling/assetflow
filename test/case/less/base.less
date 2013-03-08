@@ -1,0 +1,238 @@
+
+/**
+ * ------------------------------------
+ * RESET
+ * ------------------------------------
+ */
+html, body {
+  background: @bg-body;
+  #gradient.vertical(darken(@bg-body-color, 20%), @bg-body-color);
+
+}
+
+
+/**
+ * ------------------------------------
+ * TYPOGRAPHY
+ * ------------------------------------
+ */
+.initial-dropped {
+  float:left;
+  font-family: @serifFontFamily;
+  font-size: 75px;
+  margin: 0;
+  line-height: 55px;
+  padding: 4px 6px 0 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: @baseLineHeight;
+}
+
+/* Redeclare monospace font family: h5bp.com/j */
+pre, code, kbd, samp {
+  font-family: monospace, serif;
+  font-size: 1em
+}
+
+sup {
+  top: -0.8em;
+  font-size: 60%;
+  padding-right: 0.2em;
+}
+
+.no-wrap {
+  .noWrap();
+}
+
+/**
+ * ------------------------------------
+ * SELECTION BACKGROUND
+ * ------------------------------------
+ */
+::-moz-selection { background: #0054E6; color: #fff; text-shadow: none; }
+::selection { background: #0054E6; color: #fff; text-shadow: none; }
+
+code span::-moz-selection { background: @highlight-selection-bg}
+code span::selection { background: @highlight-selection-bg}
+code::-moz-selection { background: @highlight-selection-bg}
+code::selection { background: @highlight-selection-bg}
+pre::-moz-selection { background: @highlight-selection-bg}
+pre::selection { background: @highlight-selection-bg}
+
+/**
+ * ------------------------------------
+ * CODE HIGHLIGHTING
+ * ------------------------------------
+ */
+// code pills
+.content p>code{
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  .border-radius(0);
+  color:inherit;
+}
+
+pre {
+  margin-left: 0;
+  margin-right: 0;
+  .border-radius(0);
+  border: 1px solid #05232b;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: @bg-codeblock;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #f2f2f2;
+  .box-shadow("inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.6)");
+}
+
+.highlight pre  {
+  padding: 5px 20px;
+}
+
+.linenos pre {
+  background-color: #073642;
+  color: @color-linenos;
+}
+
+// target pre inside a table
+figure {
+  margin: 0 0 @baseLineHeight 0;
+  padding: 0;
+  overflow: auto;
+}
+
+// target pre as content child
+.content>pre {
+
+}
+
+table.highlighttable {
+  border-spacing: 0;
+  width: 100%;
+  overflow: auto;
+
+  td {
+    vertical-align: top;
+    margin:0;
+    padding:0;
+  }
+  pre {
+    white-space: pre;
+    margin:0;
+  }
+  //table-layout: fixed;
+  tbody {
+    vertical-align: top;
+    border-spacing: 0;
+  }
+  td.code {
+    width: 100%;
+    text-align: left;
+    pre {
+      overflow: auto;
+      border-left: 0;
+    }
+  }
+
+  td.linenos {
+    pre {
+      text-align: right;
+      border-right: 0;
+      color: @color-linenos;
+    }
+  }
+}
+
+
+/**
+ * ------------------------------------
+ * HEADER / FOOTER
+ * ------------------------------------
+ */
+
+@content-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.1);
+
+.header-master {
+
+  .site-title-name {
+    color: @color-header;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .site-title {
+    margin: 0;
+    small, a {
+      display: block;
+    }
+    small {
+      font-size: 17.3px;
+    }
+  }
+}
+.header-unit{
+  margin-top: 20px;
+}
+
+.header-unit-inner {
+  background: @bg-header;
+  padding-top: 29px;
+  height: 120px;
+
+  .border-top-left-radius(30px);
+  .box-shadow(2px 2px 5px 0 rgba(0, 0, 0, 0.3));
+}
+
+.content-gutter-left {
+  padding-left: @baseContentGutter;
+}
+.content-gutter-right {
+  padding-right: @baseContentGutter;
+}
+
+.doubleslash {
+  color: hsl(300, 100%, 50%);
+  .lolipop-trans(color);
+}
+
+footer {
+  height: 300px;
+  padding-top: 40px;
+  background: @bg-footer;
+  .box-shadow(inset 0 10px 10px -10px rgba(0, 0, 0, 0.25));
+}
+
+.footer-copyright {
+  font-size: 12px;
+  margin-top: 10px;
+  a {
+    color: #666;
+  }
+}
+
+.footer-note {
+  margin-top: 200px;
+  color: #888;
+}
+
+article {
+
+  .content {
+    .content-styles();
+    @tmp-shadow: inset 0 6px 6px -3px rgba(0, 0, 0, 0.35)
+      , @content-shadow;
+    .box-shadow(@tmp-shadow);
+  }
+}
+
