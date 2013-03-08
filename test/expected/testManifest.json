@@ -1,0 +1,61 @@
+{
+    "__conf__": {
+        "cdnurl": "http://s3.aws.com/"
+    },
+    "css/style.css": {
+        "mtime": "2013-02-25T13:01:14.000Z",
+        "absPath": "temp/testCase/test/case/css/style-4b5cb6.css",
+        "relPath": "css/style-4b5cb6.css",
+        "hash": "4b5cb632010b3345492def21f4a5539e",
+        "gzipHash": "f669f6c94e4386312c13c09d2f68a6d7"
+    },
+    "css/tpstyle.css": {
+        "mtime": "2013-02-25T13:01:14.000Z",
+        "absPath": "temp/testCase/test/case/css/tpstyle-402532.css",
+        "relPath": "css/tpstyle-402532.css",
+        "hash": "402532bcf5926aa5a5e337b7421efa18",
+        "gzipHash": "b1a5f82d9f30761cb1a004c815bf220a"
+    },
+    "img/coding-weapons.png": {
+        "mtime": "2012-12-15T13:13:59.000Z",
+        "absPath": "temp/testCase/test/case/img/coding-weapons-a8dd80.png",
+        "relPath": "img/coding-weapons-a8dd80.png",
+        "hash": "a8dd80c04815fd7b0167d54aa25fa8ca",
+        "gzipHash": "e115de4620adfb503f78b55a068e1d91"
+    },
+    "img/pdf-icon-bare.png": {
+        "mtime": "2013-02-25T13:01:14.000Z",
+        "absPath": "temp/testCase/test/case/img/pdf-icon-bare-435639.png",
+        "relPath": "img/pdf-icon-bare-435639.png",
+        "hash": "43563986caaae2b29f21a612474aed1d",
+        "gzipHash": "2a8250a01b7ceb09857b69b8bb9ba993"
+    },
+    "img/pdf-icon-cv.png": {
+        "mtime": "2013-02-25T13:01:14.000Z",
+        "absPath": "temp/testCase/test/case/img/pdf-icon-cv-7bc906.png",
+        "relPath": "img/pdf-icon-cv-7bc906.png",
+        "hash": "7bc906c8d16a5e2ab806e3275e1ba9b1",
+        "gzipHash": "0f9e1b9e7b9344ff630c1996425253ac"
+    },
+    "img/social-white-v2.png": {
+        "mtime": "2013-02-25T13:01:14.000Z",
+        "absPath": "temp/testCase/test/case/img/social-white-v2-fc9a78.png",
+        "relPath": "img/social-white-v2-fc9a78.png",
+        "hash": "fc9a78d4b04ab0db9887288cc1ac45f4",
+        "gzipHash": "3dbd6bf0e3f713dae27fe005ce5fa0a1"
+    },
+    "js/frontpage.js": {
+        "mtime": "2012-12-10T18:34:12.000Z",
+        "absPath": "temp/testCase/test/case/js/frontpage-21ba0c.js",
+        "relPath": "js/frontpage-21ba0c.js",
+        "hash": "21ba0ce90f8efe08d6099d14fc69aabb",
+        "gzipHash": "93c73b7247268bf73764368f5d53b8a2"
+    },
+    "js/thanpol.as.js": {
+        "mtime": "2013-01-17T19:17:12.000Z",
+        "absPath": "temp/testCase/test/case/js/thanpol.as-fdc80c.js",
+        "relPath": "js/thanpol.as-fdc80c.js",
+        "hash": "fdc80c0fb73a17fbbf65e7f85f8ecdeb",
+        "gzipHash": "54c51db2f3c336cb4b5c8be1ed539dd8"
+    }
+}

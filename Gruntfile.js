@@ -15,6 +15,9 @@ module.exports = function( grunt ) {
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-s3');
+  grunt.loadNpmTasks('grunt-mocha-test');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+
   gruntAssets(grunt);
 
   //
@@ -36,19 +39,32 @@ module.exports = function( grunt ) {
       targetName: {
         src: ['lib/asset-*.js', '!./node_modules/**/*.js', '!./temp/**/*.js'],
         dest: 'temp/assets'
+      },
+
+      testCase: {
+        options: {
+          rel: 'test/case/',
+          truncateHash: 6,
+          manifest: 'temp/testManifest.json',
+          // force serialization of files so their order won't change on the
+          // manifest file.
+          maxOperations: 1
+        },
+        src: ['test/case/**', '!test/case/less/**'],
+        dest: 'temp/testCase'
       }
     },
 
     assetsReplace: {
       options: {
-        manifest: 'temp/manifest.json'
+        manifest: 'temp/testManifest.json'
       },
-      lessFiles: {
+      testCase: {
         options: {
           key: '__ASSET(%)'
         },
         files: {
-          'temp/replace-out/': ['test/case/**/*.less']
+          'temp/replace-testCase/': ['test/case/less/*.less']
         }
       }
     },
@@ -83,12 +99,16 @@ module.exports = function( grunt ) {
     },
 
     watch: {
-      test: {
+      debug: {
         files: ['*.js', 'lib/**/*.js', 'tasks/**/*.js'],
         tasks: [
         'assets'
         //'assetsS3'
         ]
+      },
+      test: {
+        files: ['*.js', 'lib/**/*.js', 'tasks/**/*.js', 'test/spec/**/*.js'],
+        tasks: ['test']
       }
     },
 
@@ -120,8 +140,9 @@ module.exports = function( grunt ) {
      * TESTING
      *
      */
+    clean: ['temp/*'],
     mochaTest: {
-      gruntTasks: [ 'test/grunt-task/**/*.js' ]
+      gruntTasks: [ 'test/spec/**/*.js' ]
     },
 
     mochaTestConfig: {
@@ -135,36 +156,12 @@ module.exports = function( grunt ) {
 
   });
 
-
-  grunt.registerTask('test', 'Test all or specific targets', function(target) {
-    var gruntTest = [
-      'mochaTest:gruntTasks'
-    ];
-
-    var webTest = [
-    ];
-
-    // clear temp folder
-    grunt.file.expand( ['temp/*'] )
-      .forEach( grunt.file.delete );
-
-    //return;
-    switch( target ) {
-      case 'tasks':
-      case 'grunt':
-      case 'node':
-        grunt.task.run(gruntTest);
-      break;
-      case 'web':
-        grunt.task.run(webTest);
-      break;
-      default:
-        grunt.task.run(webTest);
-        grunt.task.run(gruntTest);
-      break;
-    }
-
-  });
+  grunt.registerTask('test', [
+    'clean',
+    'assets:testCase',
+    'assetsReplace:testCase',
+    'mochaTest'
+  ]);
 
   grunt.registerTask('default', ['test']);
 

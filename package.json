@@ -35,7 +35,7 @@
     "grunt": "~0.4.0",
     "grunt-ss-helpers": "0.0.9",
     "collections": "~0.1.15",
-    "grunt-s3": "https://github.com/thanpolas/grunt-s3/tarball/facd32da306238a4d8d12f6fcb611ede78a7c7d5",
+    "grunt-s3": "https://github.com/thanpolas/grunt-s3/tarball/0769695d15ff7d762b8e40f70df8470ded8a4924",
     "grunt-string-replace": "https://github.com/thanpolas/grunt-string-replace/tarball/7e6087974025bb5067f579f1124da493fce3527a",
     "regexp-quote": "0.0.0",
     "knox": "~0.5.4",
@@ -48,7 +48,8 @@
     "chai": "~1.5.0",
     "sinon": "~1.5.2",
     "grunt-contrib-watch": "~0.2.0",
-    "config": "~0.4.20"
+    "config": "~0.4.20",
+    "grunt-contrib-clean": "~0.4.0"
   },
   "keywords": [
     "gruntplugin",
