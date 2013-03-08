@@ -30,10 +30,11 @@ module.exports = function( grunt ) {
         manifest: 'temp/manifest.json',
         cdnurl: 'http://s3.aws.com/',
         maxOperations: 0,
-        progress: true
+        progress: false,
+        rel: 'lib/'
       },
       targetName: {
-        src: ['lib/asset-pipeline.js', '!./node_modules/**/*.js', '!./temp/**/*.js'],
+        src: ['lib/asset-*.js', '!./node_modules/**/*.js', '!./temp/**/*.js'],
         dest: 'temp/assets'
       }
     },
@@ -85,8 +86,8 @@ module.exports = function( grunt ) {
       test: {
         files: ['*.js', 'lib/**/*.js', 'tasks/**/*.js'],
         tasks: [
-        'assets',
-        'assetsS3'
+        'assets'
+        //'assetsS3'
         ]
       }
     },
