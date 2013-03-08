@@ -6,6 +6,7 @@ var helpers = require('grunt-ss-helpers'),
     assets  = require('../lib/asset-pipeline'),
     taskReplace = require('./task-replace'),
     nodeHelper = require('../lib/asset-node-helper'),
+    manifest = require('../lib/asset-manifest'),
     taskS3stat = require('./task-s3-stat.js');
 
 module.exports = function(grunt) {
@@ -17,7 +18,8 @@ module.exports = function(grunt) {
       assets: assets,
       replace: taskReplace,
       config: nodeHelper.config,
-      asset: nodeHelper.asset
+      asset: nodeHelper.asset,
+      manifest: manifest
     };
   }
 

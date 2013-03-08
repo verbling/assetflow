@@ -1,7 +1,4 @@
 {
-    "__conf__": {
-        "cdnurl": "http://s3.aws.com/"
-    },
     "css/style.css": {
         "mtime": "2013-02-25T13:01:14.000Z",
         "absPath": "temp/testCase/test/case/css/style-4b5cb6.css",
@@ -57,5 +54,8 @@
         "relPath": "js/thanpol.as-fdc80c.js",
         "hash": "fdc80c0fb73a17fbbf65e7f85f8ecdeb",
         "gzipHash": "54c51db2f3c336cb4b5c8be1ed539dd8"
+    },
+    "__conf__": {
+        "cdnurl": "http://s3.aws.com/"
     }
 }
