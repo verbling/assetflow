@@ -3,6 +3,7 @@
  */
 
 var sinon  = require('sinon'),
+    manifest = require('../../lib/asset-manifest'),
     expect = require('chai').expect,
     grunt  = require('grunt'),
     assert = require('chai').assert;
@@ -27,6 +28,13 @@ describe('Grunt task :: assets', function(){
   });
 
   it('should return the proper asset value', function() {
+
+
+//https://d1nn1xe9py2udg.cloudfront.net/test-delete6/
+
+    manifest.init( tmp + 'testManifest.json');
+
+    var asset = manifest.asset( 'js/thanpol.as.js' );
 
     assert.ok('true');
   });

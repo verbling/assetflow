@@ -31,7 +31,7 @@ module.exports = function( grunt ) {
         debug: false,
         truncateHash: 8,
         manifest: 'temp/manifest.json',
-        cdnurl: 'http://s3.aws.com/',
+        cdnurl: 'http://s3.aws.com/testdelete/',
         maxOperations: 0,
         progress: false,
         rel: 'lib/'

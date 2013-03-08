@@ -56,6 +56,6 @@
         "gzipHash": "54c51db2f3c336cb4b5c8be1ed539dd8"
     },
     "__conf__": {
-        "cdnurl": "http://s3.aws.com/"
+        "cdnurl": "http://s3.aws.com/testdelete/"
     }
 }
