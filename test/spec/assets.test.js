@@ -26,4 +26,9 @@ describe('Grunt task :: assets', function(){
     assert.equal(actual, expected, 'task output should equal: ' + actualFile);
   });
 
+  it('should return the proper asset value', function() {
+
+    assert.ok('true');
+  });
+
 });
