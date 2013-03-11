@@ -15,7 +15,5 @@ module.exports = function(grunt) {
         grunt.log.error('Operation failed: ' + (err + '').red);
         done(false);
       });
-
   });
-
 };

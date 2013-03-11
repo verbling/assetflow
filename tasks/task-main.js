@@ -7,6 +7,7 @@ var helpers = require('grunt-ss-helpers'),
     taskReplace = require('./task-replace'),
     nodeHelper = require('../lib/asset-node-helper'),
     manifest = require('../lib/asset-manifest'),
+    assetsBundle = require('../lib/asset-bundle'),
     taskS3stat = require('./task-s3-stat.js');
 
 module.exports = function(grunt) {
@@ -19,6 +20,7 @@ module.exports = function(grunt) {
       replace: taskReplace,
       config: nodeHelper.config,
       asset: nodeHelper.asset,
+      assetsBundle: assetsBundle,
       manifest: manifest
     };
   }
@@ -46,6 +48,17 @@ module.exports = function(grunt) {
         done(false);
       });
 
+  });
+
+
+  grunt.registerMultiTask('assetsBundle' , function() {
+    var done = this.async();
+    assetsBundle.run(this.files.shift(), this.options(), this.target)
+      .then(done)
+      .otherwise(function(err){
+        grunt.log.error('Operation failed: ' + (err + '').red);
+        done(false);
+      });
   });
 
   // initialize rest of the tasks

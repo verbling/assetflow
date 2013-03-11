@@ -95,6 +95,36 @@ module.exports = function( grunt ) {
       }
     },
 
+    assetsBundle: {
+      options: {
+        manifest: 'temp/testManifest.json',
+        debug: false,
+        assets:[
+          'img/coding-weapons.png',
+          'img/social-white-v2.png',
+          'img/pdf-icon-bare.png'
+        ]
+      },
+      testCase: {
+        options: {
+        },
+        dest: 'temp/bundles/noexport.js'
+      },
+      testCaseNS: {
+        options: {
+          ns: 'car.zit.pof',
+        },
+        dest: 'temp/bundles/namespace.js'
+      },
+      testCaseAMD: {
+        options: {
+          amd: true,
+        },
+        dest: 'temp/bundles/amd.js'
+      }
+
+
+    },
     assetsS3: {
       options: {
         debug: false,
@@ -128,7 +158,8 @@ module.exports = function( grunt ) {
       debug: {
         files: ['*.js', 'lib/**/*.js', 'tasks/**/*.js'],
         tasks: [
-        'assetsReplace:testCaseHbs'
+        'assetsBundle:testCase'
+        //'assetsReplace:testCaseHbs'
         //'assetsS3'
         ]
       },
@@ -184,6 +215,9 @@ module.exports = function( grunt ) {
     'clean',
     'assets:testCase',
     'assets:testCaseAbs',
+    'assetsBundle:testCase',
+    'assetsBundle:testCaseNS',
+    'assetsBundle:testCaseAMD',
     'assetsReplace:testCase',
     'mochaTest'
   ]);
