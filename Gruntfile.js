@@ -52,6 +52,20 @@ module.exports = function( grunt ) {
         },
         src: ['test/case/**', '!test/case/less/**'],
         dest: 'temp/testCase'
+      },
+
+      testCaseAbs: {
+        options: {
+          rel: 'test/case/',
+          truncateHash: 6,
+          manifest: 'temp/testManifestAbs.json',
+          // force serialization of files so their order won't change on the
+          // manifest file.
+          maxOperations: 1,
+          prepend: '/'
+        },
+        src: ['test/case/**', '!test/case/less/**'],
+        dest: 'temp/testCaseAbs'
       }
     },
 
@@ -159,6 +173,7 @@ module.exports = function( grunt ) {
   grunt.registerTask('test', [
     'clean',
     'assets:testCase',
+    'assets:testCaseAbs',
     'assetsReplace:testCase',
     'mochaTest'
   ]);
