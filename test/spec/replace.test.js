@@ -26,4 +26,12 @@ describe('Grunt task :: assetsReplace', function(){
     assert.equal(actual, expected, 'task output should equal: ' + actualFile);
   });
 
+  it('should produce the correct less file with abs paths', function(){
+    var actualFile = 'variables.abs.less';
+    var actual = grunt.file.read('temp/replace-prepend/test/case/less/variables.less');
+    var expected = grunt.file.read(expectedPath + actualFile);
+    assert.equal(actual, expected, 'task output should equal: ' + actualFile);
+  });
+
+
 });

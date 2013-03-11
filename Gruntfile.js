@@ -90,7 +90,17 @@ module.exports = function( grunt ) {
           key: '{{asset "%"}}'
         },
         files: {
-          'temp/handlebars': ['test/case/handlebars/*.hbs']
+          'temp/handlebars/': ['test/case/handlebars/*.hbs']
+        }
+      },
+      testCasePrepend: {
+        options: {
+          key: '__ASSET(%)',
+          manifest: 'temp/testManifestAbs.json',
+          prepend: '/'
+        },
+        files: {
+          'temp/replace-prepend/': ['test/case/less/*.less']
         }
       }
     },
@@ -219,6 +229,7 @@ module.exports = function( grunt ) {
     'assetsBundle:testCaseNS',
     'assetsBundle:testCaseAMD',
     'assetsReplace:testCase',
+    'assetsReplace:testCasePrepend',
     'mochaTest'
   ]);
 
