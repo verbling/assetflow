@@ -28,7 +28,7 @@ module.exports = function( grunt ) {
 
     assets: {
       options: {
-        debug: false,
+        debug: true,
         truncateHash: 8,
         manifest: 'temp/manifest.json',
         cdnurl: 'http://s3.aws.com/testdelete/',
@@ -138,13 +138,13 @@ module.exports = function( grunt ) {
     assetsS3: {
       options: {
         debug: false,
-        checkS3Head: false,
-        manifest: 'temp/manifest.json',
+        checkS3Head: true,
+        manifest: 'temp/testManifest.json',
         key: config.aws_key,
         secret: config.aws_secret,
         bucket: config.aws_static_bucket,
         access: 'public-read',
-        progress: true
+        progress: false
       },
       // Files to be uploaded.
       target: {
@@ -153,9 +153,9 @@ module.exports = function( grunt ) {
           maxOperations: 0
         },
         upload: {
-          src: 'temp/assets/**',
+          src: 'temp/testCase/**',
           dest:  'testdelete/',
-          rel: 'temp/assets',
+          rel: 'temp/testCase/test/case',
           gzip: true,
           gzipExclude: ['.jpeg', '.jpg', '.png', '.gif', '.less', '.mp3',
               '.mp4', '.mkv', '.webm', '.gz'],
