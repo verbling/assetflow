@@ -1,0 +1,34 @@
+
+  <img src="{{asset "img/get-ready-to-speak.png"}}" class="get-ready-talk" />
+
+  <div class="standard plan-box partner" data-type="partner">
+    <a class="get-partner button" data-type="partner"><i class="icon-play"></i>{{t 'friends.get_partner' }}</a>
+    <div class="spinner">
+      <div class="icon-spinner icon-spin icon-4x"></div>
+      <p>{{t 'friends.preparing' }}</p>
+    </div>
+    <p class="sub" style="display: none">{{t 'friends.slight_wait' }}</p>
+  </div>
+</div>
+
+<div id="talk-box-inner">
+  <div class="flash-message">{{t 'friends.click_below_to_confirm' }}</div>
+  <div id="embed-wrapper" class="display-box">
+    <div id="inner-embed"><div id="embed"></div></div>
+  </div>
+
+  <div id="permission-rememberallow" class="display-box permission">
+    <span>{{t 'friends.select_allow' }}</span>
+    <img class="arrow" src="{{asset "img/allowarrow.png"}}" />
+  </div>
+  <div id="permission-remember" class="display-box permission">
+    <span class="remember">{{t 'friends.click_remember' }}</span>
+    <img class="remember-arrow" src="{{asset "img/allowarrow.png"}}" />
+    <span class="close-txt">{{t 'friends.then_close' }}</span>
+    <img class="close-arrow" src="{{asset "img/closearrow.png"}}" />
+  </div>
+  <div id="permission-onlyallow" class="display-box permission">
+    <span>{{t 'friends.click_allow' }}</span>
+    <span class="link"><a class="skip-permissions-btn">{{t 'friends.skip_next_time' }}</a></span>
+    <img src="{{asset "img/allowbigarrow.png"}}"/ >
+  </div>

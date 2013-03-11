@@ -1,7 +1,7 @@
 {
   "name": "node-asset-pipeline",
   "description": "Asset pipeline ala rails for node",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "homepage": "https://github.com/thanpolas/node-asset-pipeline",
   "author": "Verbling",
   "repository": {

@@ -36,10 +36,6 @@ module.exports = function( grunt ) {
         progress: false,
         rel: 'lib/'
       },
-      targetName: {
-        src: ['lib/asset-*.js', '!./node_modules/**/*.js', '!./temp/**/*.js'],
-        dest: 'temp/assets'
-      },
 
       testCase: {
         options: {
@@ -50,7 +46,11 @@ module.exports = function( grunt ) {
           // manifest file.
           maxOperations: 1
         },
-        src: ['test/case/**', '!test/case/less/**'],
+        src: [
+          'test/case/**',
+          '!test/case/less/**',
+          '!test/case/handlebars/**'
+        ],
         dest: 'temp/testCase'
       },
 
@@ -64,7 +64,11 @@ module.exports = function( grunt ) {
           maxOperations: 1,
           prepend: '/'
         },
-        src: ['test/case/**', '!test/case/less/**'],
+        src: [
+          'test/case/**',
+          '!test/case/less/**',
+          '!test/case/handlebars/**'
+        ],
         dest: 'temp/testCaseAbs'
       }
     },
@@ -79,6 +83,14 @@ module.exports = function( grunt ) {
         },
         files: {
           'temp/replace-testCase/': ['test/case/less/*.less']
+        }
+      },
+      testCaseHbs: {
+        options: {
+          key: '{{asset "%"}}'
+        },
+        files: {
+          'temp/handlebars': ['test/case/handlebars/*.hbs']
         }
       }
     },
@@ -116,7 +128,7 @@ module.exports = function( grunt ) {
       debug: {
         files: ['*.js', 'lib/**/*.js', 'tasks/**/*.js'],
         tasks: [
-        'assets'
+        'assetsReplace:testCaseHbs'
         //'assetsS3'
         ]
       },
@@ -147,8 +159,6 @@ module.exports = function( grunt ) {
         ]
       }
     },
-
-
 
     /**
      * TESTING
