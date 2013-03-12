@@ -340,6 +340,7 @@ var asset = assets['/img/logo.png'];
 ```
 
 > This is a weak part in the API and will surely see changes in the future.
+
 <sup>[↑ Back to TOC](#table-of-contents)</sup>
 
 ## Grunt Task `assetsS3`
