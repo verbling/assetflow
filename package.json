@@ -1,20 +1,20 @@
 {
-  "name": "node-asset-pipeline",
-  "description": "Asset pipeline ala rails for node",
+  "name": "assetflow",
+  "description": "Asset deployment for node",
   "version": "0.0.20",
-  "homepage": "https://github.com/thanpolas/node-asset-pipeline",
+  "homepage": "https://github.com/verbling/assetflow",
   "author": "Verbling",
   "repository": {
     "type": "git",
-    "url": "git://github.com/thanpolas/node-asset-pipeline.git"
+    "url": "git://github.com/verbling/assetflow.git"
   },
   "bugs": {
-    "url": "https://github.com/thanpolas/node-asset-pipeline/issues"
+    "url": "https://github.com/verbling/assetflow/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/thanpolas/node-asset-pipeline/blob/master/LICENSE-MIT"
+      "url": "https://github.com/verbling/assetflow/blob/master/LICENSE-MIT"
     }
   ],
   "contributors": [
@@ -57,6 +57,7 @@
     "assets",
     "asset pipeline",
     "deployment",
-    "deploy"
+    "deploy",
+    "pipeline"
   ]
 }
