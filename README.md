@@ -1,8 +1,6 @@
 # assetflow
 
-Assetflow is an asset deployment tool for node. It enables you to create powerful asset flows easily and fast.
-
-Assetflow is a [Grunt task][grunt] and works with **S3** out of the box. It will take care of versioning and apply solid cache-busting techniques transparently.
+Assetflow is an asset deployment tool. It supports md5 hash comparison with **S3** and enables you to create powerful asset flows easily and fast. It is a [Grunt task][grunt] and applies solid cache-busting techniques transparently.
 
 > If you are not familiar with Grunt check out the [Grunt's Getting Started guide][Getting Started].
 
@@ -21,41 +19,20 @@ Optionally there are two more tasks you can perform:
 * Search & replace any set of assets based on a custom keyword, i.e. `__ASSET(img/logo.jpg)`.
 * Create the `clientManifest.js` file, a client optimized subset of the manifest.
 
-## Quick Start
+## Install
 
 ```shell
 npm install assetflow --save-dev
 ```
 
-Open your [Gruntfile][] and add the following config:
+## Table Of Contents
 
-```js
-  assets: {
-      options: {
-        manifest: 'temp/manifest.json',
-      },
-      all: {
-        src: ['assets/**'],
-        dest: 'temp/assets'
-      },
-    },
-    assetsS3: {
-      options: {
-        checkS3Head: true,
-        manifest: 'temp/manifest.json',
-        key: config.aws_key,
-        secret: config.aws_secret,
-        bucket: config.aws_static_bucket,
-        access: 'public-read',
-      },
-      target: {
-        upload: {
-          src: 'temp/assets/**',
-          dest:  'assets/'
-        }
-      }
-    }
-```
+* [Grunt Task `assets`](#grunt-task-assets) :: Creates the manifest file and copies your assets to a temp folder.
+* [Grunt Task `assetsReplace`](#grunt-task-assetsReplace) :: Replaces defined keywords in files using the manifest file.
+* [Grunt Task `assetsBundle`](#grunt-task-assetsBundle) :: Create a front-end optimized manifest file.
+  - [Using assetflow on the web](#using-assetflow-on-the-front-end)
+* [Grunt Task `assetsS3`](#grunt-task-assetsS3) :: Compare assets' hashes with S3 and upload new and changed files.
+* [Using Assetflow on Node](#using-assetflow-on-node)
 
 ## Grunt Task `assets`
 
@@ -183,6 +160,7 @@ assets: {
   }
 }
 ```
+<sup>[↑ Back to TOC](#table-of-contents)</sup>
 
 ## Grunt Task `assetsReplace`
 
@@ -485,6 +463,24 @@ assetsS3: {
   }
 }
 ```
+
+## Using Assetflow on Node
+
+You can use the Assetflow library on node:
+
+```js
+// mind the () in the end!
+var assets = require('assetflow')();
+
+assets.config({
+  manifest: __dirname + '/assetManifest.json'
+});
+
+var assetUrl = assets.asset('/img/logo.png');
+```
+
+> Like the client API, node's API is weak and may change in the future.
+
 
 ## Authors
 
