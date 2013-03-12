@@ -28,10 +28,10 @@ npm install assetflow --save-dev
 ## Table Of Contents
 
 * [Grunt Task `assets`](#grunt-task-assets) :: Creates the manifest file and copies your assets to a temp folder.
-* [Grunt Task `assetsReplace`](#grunt-task-assetsReplace) :: Replaces defined keywords in files using the manifest file.
-* [Grunt Task `assetsBundle`](#grunt-task-assetsBundle) :: Create a front-end optimized manifest file.
+* [Grunt Task `assetsReplace`](#grunt-task-assetsreplace) :: Replaces defined keywords in files using the manifest file.
+* [Grunt Task `assetsBundle`](#grunt-task-assetsbundle) :: Create a front-end optimized manifest file.
   - [Using assetflow on the web](#using-assetflow-on-the-front-end)
-* [Grunt Task `assetsS3`](#grunt-task-assetsS3) :: Compare assets' hashes with S3 and upload new and changed files.
+* [Grunt Task `assetsS3`](#grunt-task-assetss3) :: Compare assets' hashes with S3 and upload new and changed files.
 * [Using Assetflow on Node](#using-assetflow-on-node)
 
 ## Grunt Task `assets`
@@ -264,6 +264,7 @@ assetsReplace: {
   }
 }
 ```
+<sup>[↑ Back to TOC](#table-of-contents)</sup>
 
 ## Grunt Task `assetsBundle`
 
@@ -339,6 +340,7 @@ var asset = assets['/img/logo.png'];
 ```
 
 > This is a weak part in the API and will surely see changes in the future.
+<sup>[↑ Back to TOC](#table-of-contents)</sup>
 
 ## Grunt Task `assetsS3`
 
@@ -463,6 +465,7 @@ assetsS3: {
   }
 }
 ```
+<sup>[↑ Back to TOC](#table-of-contents)</sup>
 
 ## Using Assetflow on Node
 
@@ -481,6 +484,7 @@ var assetUrl = assets.asset('/img/logo.png');
 
 > Like the client API, node's API is weak and may change in the future.
 
+<sup>[↑ Back to TOC](#table-of-contents)</sup>
 
 ## Authors
 
