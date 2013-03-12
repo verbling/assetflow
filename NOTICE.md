@@ -9,8 +9,8 @@ This package distributable, includes parts or fragments of the following package
 
 This repository, includes or makes use of the following packages:
 
-* **Grunt String Replace** by Erick Ruiz de Chavez
-
+* [**grunt-string-replace**][grunt-replace] by [@erickrdch][erickrdch]
+* [**grunt-S3**][grunt-S3] by [@pifantastic][pifantastic].
 
 ## Required for development
 
@@ -19,6 +19,28 @@ Development for this package requires the use of the following packages that are
 
 ## The licenses
 Here are the licenses of the packages included.
+
+### Grunt S3
+
+Copyright (c) 2012 Aaron Forsander
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 ### Grunt String Replace
 /*
@@ -64,3 +86,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+[grunt-replace]: https://github.com/erickrdch/grunt-string-replace "Grunt string replace"
+[grunt-S3]: https://github.com/pifantastic/grunt-s3 "grunt-s3 task"
+[pifantastic]: https://github.com/pifantastic "Aaron Forsander"
+[erickrdch]: https://github.com/erickrdch "Erick Ruiz de Chavez on GitHub"
