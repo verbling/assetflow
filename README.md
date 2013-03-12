@@ -486,9 +486,18 @@ assetsS3: {
 }
 ```
 
+## Authors
+
+* [@thanpolas][thanpolas]
+
 ## Release History
 - **v0.1.0**, *Mid March 2013*
   - Big Bang
+
+## License
+Copyright 2012 Verbling (Fluency Forums Corporation)
+
+Licensed under the MIT License
 
 [grunt]: http://gruntjs.com/
 [Getting Started]: https://github.com/gruntjs/grunt/wiki/Getting-started
@@ -497,3 +506,4 @@ assetsS3: {
 [grunt-S3]: https://github.com/pifantastic/grunt-s3 "grunt-s3 task"
 [pifantastic]: https://github.com/pifantastic "Aaron Forsander"
 [erickrdch]: https://github.com/erickrdch "Erick Ruiz de Chavez on GitHub"
+[thanpolas]: https://github.com/thanpolas "Thanasis Polychronakis"
