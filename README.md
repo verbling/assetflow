@@ -57,7 +57,7 @@ Open your [Gruntfile][] and add the following config:
     }
 ```
 
-## Grunt Task :: assets
+## Grunt Task `assets`
 
 The `assets` task performs these operations:
 
@@ -85,6 +85,19 @@ Define the location of the manifest file.
 
 Add the url of your CDN to prepend it to all assets.
 
+#### `truncateHash`
+**Type**: `number` **Default**: *none*
+
+The **md5** hash is 32 bytes long, you don't need all of it, use this option to truncate the hash down to *n* chars.
+
+#### `maxOperations`
+**Type**: `number` **Default**: `100`
+
+The maximum number of concurent operations, in this case the operations are file copying.
+
+
+**Type**: `string` **Default**: *none*
+**Type**: `string` **Default**: *none*
 
 
 The assets task will scan all the defined assets, generate md5 hashes, create the `manifest.json` file and copy all the assets to a temporary location renamed with their md5 hash.
