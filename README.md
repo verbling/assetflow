@@ -51,7 +51,7 @@ Open your [Gruntfile][] and add the following config:
       target: {
         upload: {
           src: 'temp/assets/**',
-          dest:  'folder/'
+          dest:  'assets/'
         }
       }
     }
@@ -85,33 +85,87 @@ Define the location of the manifest file.
 
 Add the url of your CDN to prepend it to all assets.
 
+#### `rel`
+**Type**: `string` **Default**: *none*
+
+The `rel` option will perform directory substraction on the source to calculate the relative path to the asset. Consider this case:
+
+Your folder of static assets is under `assets/`, so the path to your logo would be `assets/img/logo.png` which would be accessed by the browser as `/img/logo.png`.
+
+Declaring the `assets` folder as a `rel` path will make sure that all assets have the proper url.
+
+Example
+```js
+assets: {
+  options: {
+    rel: 'assets/'
+  },
+  all: {
+    src: 'assets/**',
+    dest: 'temp/assets'
+  }
+}
+```
+
+
 #### `truncateHash`
 **Type**: `number` **Default**: *none*
 
 The **md5** hash is 32 bytes long, you don't need all of it, use this option to truncate the hash down to *n* chars.
+
+#### `prepend`
+**Type**: `string` **Default**: *none*
+
+This option will prepend a value to the asset's key. It is mostly used to prepend a slash and make the asset key absolute, for example:
+
+By default, the `assets` task will create records in the `manifest.json` file as relative web paths: `img/logo.png`. If you need the key to be an absolute path then you have to use `prepend`.
+
+```js
+options: {
+  prepend: '/'
+}
+```
 
 #### `maxOperations`
 **Type**: `number` **Default**: `100`
 
 The maximum number of concurent operations, in this case the operations are file copying.
 
+#### `progress`
+**Type**: `boolean` **Default**: `false`
 
-**Type**: `string` **Default**: *none*
-**Type**: `string` **Default**: *none*
+A fancy progress bar.
+
+#### `debug`
+**Type**: `boolean` **Default**: `false`
+
+Print extra debugging information.
 
 
-The assets task will scan all the defined assets, generate md5 hashes, create the `manifest.json` file and copy all the assets to a temporary location renamed with their md5 hash.
+## Grunt Task `assetsReplace`
+
+The `assetsReplace` task will search and replace the contents of your assets. It is usefull for cases where you don't have the ability of a '*helper*' to resolve your assets.
+
+LESS files are a typical example, use a custom keyword to include your assets and run the `assetsReplace` task to populate the asset urls in your `.less` files. For example if the custom keyword is `__ASSET()`:
+
+```less
+@bg-dot-light: url(__ASSET(img/pdf-icon-cv.png)) repeat 0 0 #2a2a2a;
+```
+
+After the `assetsReplace` task is executed the same line will look like this:
+
+```less
+@bg-dot-light: url(http://d3s3z9buwru1xx.cloudfront.net/assets/img/pdf-icon-cv-fk44j2s.png)) repeat 0 0 #2a2a2a;
+```
+
+> The `assetsReplace` task is based on [`grunt-string-replace`][grunt-replace] by [@erickrdch][erickrdch]
 
 ## Release History
 - **v0.1.0**, *Mid March 2013*
   - Big Bang
 
-
+[erickrdch]: https://github.com/erickrdch "Erick Ruiz de Chavez on GitHub"
+[grunt-replace]: https://github.com/erickrdch/grunt-string-replace "Grunt string replace"
 [grunt]: http://gruntjs.com/
 [Getting Started]: https://github.com/gruntjs/grunt/wiki/Getting-started
-[package.json]: https://npmjs.org/doc/json.html
-[DOMContentLoaded]: https://developer.mozilla.org/en-US/docs/Mozilla_event_reference/DOMContentLoaded_(event) "MDN DOMContentLoaded event"
-[mantriDeps]: https://github.com/thanpolas/mantri/wiki/Grunt-Task-mantriDeps "The mantriDeps grunt task"
-[mantriBuild]: https://github.com/thanpolas/mantri/wiki/Grunt-Task-mantriBuild "The mantriBuild grunt task"
 [Gruntfile]: https://github.com/gruntjs/grunt/wiki/Sample-Gruntfile "Grunt's Gruntfile.js"
-[ToDoApp]: https://github.com/thanpolas/todoAppMantri "The classical ToDo MVC app using Mantri's dependency management system"
