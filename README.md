@@ -155,7 +155,7 @@ LESS files are a typical example, use a custom keyword to include your assets an
 After the `assetsReplace` task is executed the same line will look like this:
 
 ```less
-@bg-dot-light: url(http://d3s3z9buwru1xx.cloudfront.net/assets/img/pdf-icon-cv-fk44j2s.png)) repeat 0 0 #2a2a2a;
+@bg-dot-light: url(http://d3s3z9buwru1xx.cloudfront.net/assets/img/pdf-icon-cv-fk44j2s.png) repeat 0 0 #2a2a2a;
 ```
 
 > The `assetsReplace` task is based on [`grunt-string-replace`][grunt-replace] by [@erickrdch][erickrdch]
