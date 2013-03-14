@@ -4,6 +4,8 @@ Assetflow is an asset deployment tool. It supports md5 hash comparison with **S3
 
 > If you are not familiar with Grunt check out the [Grunt's Getting Started guide][Getting Started].
 
+[![Build Status](https://travis-ci.org/verbling/assetflow.png?branch=master)](https://travis-ci.org/verbling/assetflow)
+
 ## Overview
 
 A typical deployment flow using assetflow:
