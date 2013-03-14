@@ -1,3 +1,3 @@
-aws_key:              ""
-aws_secret:           ""
-aws_static_bucket:    ""
+aws_key: aws_key
+aws_secret: aws_secret
+aws_static_bucket: aws_static_bucket
