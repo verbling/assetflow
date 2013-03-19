@@ -20,18 +20,35 @@ describe('Grunt task :: assets', function(){
   afterEach(function() {
   });
 
+  var compareObj = function(actualObj, expectedObj) {
+    for (var asset in actualObj) {
+      if ('__conf__' === asset) {
+        continue;
+      }
+      for (var prop in asset) {
+        if ('mtime' === prop) {
+          continue;
+        }
+        assert.equal(actualObj[asset][prop], expectedObj[asset][prop],
+          'Manifest asset "' + asset + '" should have same properties as expected');
+      }
+    }
+  };
+
   it('should produce the correct manifest json file', function(){
     var actualFile = 'testManifest.json';
-    var actual = grunt.file.read(tmp + actualFile);
-    var expected = grunt.file.read(expectedPath + actualFile);
-    assert.equal(actual, expected, 'task output should equal: ' + actualFile);
+    var actualObj = grunt.file.readJSON(tmp + actualFile);
+    var expectedObj = grunt.file.readJSON(expectedPath + actualFile);
+
+    compareObj(actualObj, expectedObj);
   });
 
   it('should produce the correct manifest json file with prepend', function(){
     var actualFile = 'testManifestAbs.json';
-    var actual = grunt.file.read(tmp + actualFile);
-    var expected = grunt.file.read(expectedPath + actualFile);
-    assert.equal(actual, expected, 'task output should equal: ' + actualFile);
+    var actualObj = grunt.file.readJSON(tmp + actualFile);
+    var expectedObj = grunt.file.readJSON(expectedPath + actualFile);
+
+    compareObj(actualObj, expectedObj);
   });
   it('should return the proper asset value', function() {
     manifest.init( tmp + 'testManifestAbs.json');
