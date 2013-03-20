@@ -284,6 +284,11 @@ Define the location of the manifest file.
 
 export the assets as an AMD module.
 
+#### `commonjs`
+**Type**: `boolean` **Default**: `false`
+
+export the assets using commonjs pattern. e.g: module.exports=..
+
 #### `ns`
 **Type**: `string` **Default**: `ASSETS`
 
