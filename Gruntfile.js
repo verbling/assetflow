@@ -131,12 +131,6 @@ module.exports = function( grunt ) {
           amd: true,
         },
         dest: 'temp/bundles/amd.js'
-      },
-      testCaseCommonJS: {
-        options: {
-          commonjs: true,
-        },
-        dest: 'temp/bundles/commonjs.js'
       }
 
 
@@ -234,7 +228,6 @@ module.exports = function( grunt ) {
     'assetsBundle:testCase',
     'assetsBundle:testCaseNS',
     'assetsBundle:testCaseAMD',
-    'assetsBundle:testCaseCommonJS',
     'assetsReplace:testCase',
     'assetsReplace:testCasePrepend',
     'mochaTest'

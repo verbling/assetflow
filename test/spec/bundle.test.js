@@ -31,12 +31,6 @@ describe('Grunt task :: assetsBundle', function(){
     var expected = grunt.file.read(expectedPath + actualFile);
     assert.equal(actual, expected, 'task output should equal: ' + actualFile);
   });
-  it('should produce the correct bundle file with commonjs export option', function(){
-    var actualFile = 'commonjs.js';
-    var actual = grunt.file.read(tmp + actualFile);
-    var expected = grunt.file.read(expectedPath + actualFile);
-    assert.equal(actual, expected, 'task output should equal: ' + actualFile);
-  });
   it('should produce the correct bundle file with namespace export option', function(){
     var actualFile = 'namespace.js';
     var actual = grunt.file.read(tmp + actualFile);
