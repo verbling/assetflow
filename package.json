@@ -1,7 +1,7 @@
 {
   "name": "assetflow",
   "description": "Asset deployment for node",
-  "version": "0.0.23",
+  "version": "0.1.0",
   "homepage": "https://github.com/verbling/assetflow",
   "author": "Verbling",
   "repository": {
