@@ -499,6 +499,9 @@ var assetUrl = assets.asset('/img/logo.png');
 * [@thanpolas][thanpolas]
 
 ## Release History
+
+- **v0.1.1**, *19 March 2013*
+  - Added support for commonjs for browsers.
 - **v0.1.0**, *Mid March 2013*
   - Big Bang
 
