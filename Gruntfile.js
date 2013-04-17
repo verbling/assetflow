@@ -7,8 +7,8 @@
  * Licensed under the MIT license.
  */
 
-var config = require('config'),
-    gruntAssets = require('./tasks/task-main');
+var config = require('config');
+var gruntAssets = require('./tasks/task-main');
 
 module.exports = function( grunt ) {
   'use strict';
@@ -174,9 +174,9 @@ module.exports = function( grunt ) {
       debug: {
         files: ['*.js', 'lib/**/*.js', 'tasks/**/*.js'],
         tasks: [
-        'assetsBundle:testCase'
-        //'assetsReplace:testCaseHbs'
-        //'assetsS3'
+          'assetsBundle:testCase'
+          //'assetsReplace:testCaseHbs'
+          //'assetsS3'
         ]
       },
       test: {
