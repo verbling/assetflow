@@ -499,7 +499,8 @@ var assetUrl = assets.asset('/img/logo.png');
 * [@thanpolas][thanpolas]
 
 ## Release History
-
+- **v0.1.2**, *17 April 2013*
+  - S3 paths now get normalized using `path.normalize()`.
 - **v0.1.1**, *19 March 2013*
   - Added support for commonjs for browsers.
 - **v0.1.0**, *Mid March 2013*
