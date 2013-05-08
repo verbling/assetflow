@@ -39,11 +39,11 @@
     "grunt-string-replace": "https://github.com/thanpolas/grunt-string-replace/tarball/7e6087974025bb5067f579f1124da493fce3527a",
     "regexp-quote": "0.0.0",
     "knox": "~0.5.4",
-    "async": "~0.2.6",
     "config": "~0.4.23",
     "timely": "0.0.1",
     "pace": "0.0.4",
-    "yaml": "~0.2.3"
+    "yaml": "~0.2.3",
+    "async": "~0.2.8"
   },
   "devDependencies": {
     "grunt-mocha-test": "~0.2.0",
