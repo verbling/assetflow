@@ -35,7 +35,6 @@
     "grunt": "~0.4.0",
     "grunt-ss-helpers": "0.0.9",
     "collections": "~0.1.15",
-    "grunt-s3": "https://github.com/thanpolas/grunt-s3/tarball/0769695d15ff7d762b8e40f70df8470ded8a4924",
     "grunt-string-replace": "https://github.com/thanpolas/grunt-string-replace/tarball/7e6087974025bb5067f579f1124da493fce3527a",
     "regexp-quote": "0.0.0",
     "config": "~0.4.23",
@@ -43,7 +42,8 @@
     "pace": "0.0.4",
     "yaml": "~0.2.3",
     "async": "~0.2.8",
-    "knox": "~0.8.0"
+    "knox": "~0.8.0",
+    "grunt-s3": "~0.2.0-alpha.1"
   },
   "devDependencies": {
     "grunt-mocha-test": "~0.2.0",
