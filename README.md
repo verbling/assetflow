@@ -158,7 +158,8 @@ assets: {
       '!assets/less/**',
       // except all files in handlebars folder
       '!assets/handlebars/**'
-    ]
+    ],
+    dest: 'temp/assets'
   }
 }
 ```
