@@ -569,6 +569,9 @@ var assetUrl = assets.asset('/img/logo.png');
 * [@thanpolas][thanpolas]
 
 ## Release History
+
+- **v0.1.5**, *21 Jul 2013*
+  - Updated dependencies versions (Knox specifically had issues that are now fixed)
 - **v0.1.4**, *08 May 2013*
   - Updated Knox so Assetflow will work for node 0.10.x
   - Fixed bug when no rel path is used.
