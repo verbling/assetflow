@@ -422,7 +422,7 @@ var asset = assets['/img/logo.png'];
 
 ## Grunt Task `assetsS3`
 
-The `assetsS3` task will read the `manifest.json` file and upload all the assets to **S3**. Although it's optional, it is highly advised to use the `chechS3Head` option which enables md5 hash checking between S3 and your local files.
+The `assetsS3` task will read the `manifest.json` file and upload all the assets to **S3**. Although it's optional, it is highly advised to use the `checkS3Head` option which enables md5 hash checking between S3 and your local files.
 
 > The `assetsS3` task is based on [grunt-S3][grunt-S3] by [@pifantastic][pifantastic]. [All options from that task](https://github.com/pifantastic/grunt-s3#options) are available in this one too.
 
