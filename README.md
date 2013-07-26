@@ -570,6 +570,8 @@ var assetUrl = assets.asset('/img/logo.png');
 
 ## Release History
 
+- **v0.1.6**, *26 Jul 2013*
+  - Bug fix for file created with `-undefined` hash, thanks [Younes](https://github.com/interactive-object).
 - **v0.1.5**, *21 Jul 2013*
   - Updated dependencies versions (Knox specifically had issues that are now fixed)
 - **v0.1.4**, *08 May 2013*
