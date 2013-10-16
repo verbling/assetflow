@@ -30,16 +30,12 @@ module.exports = function( grunt ) {
     assets: {
       options: {
         debug: true,
-        truncateHash: 8,
-        manifest: 'temp/manifest.json',
-        cdnurl: 'http://s3.aws.com/testdelete/',
-        maxOperations: 0,
         progress: false,
-        rel: 'lib/'
       },
 
       testCase: {
         options: {
+          cdnurl: 'http://s3.aws.com/testdelete/',
           rel: 'test/case/',
           truncateHash: 6,
           manifest: 'temp/testManifest.json',
@@ -71,7 +67,17 @@ module.exports = function( grunt ) {
           '!test/case/handlebars/**'
         ],
         dest: 'temp/testCaseAbs'
-      }
+      },
+
+      // replicating issue #11
+      testCaseMWers: {
+        options: {
+          rel: 'test/caseMW',
+          manifest: 'temp/manifestMW.json'
+        },
+        src: 'test/caseMW/img/**/*.png',
+        dest: 'temp/testCaseMW'
+      },
     },
 
     assetsReplace: {
