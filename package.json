@@ -45,7 +45,7 @@
     "async": "~0.9.0",
     "knox": "~0.9.1",
     "grunt-s3": "~0.2.0-alpha.3",
-    "when": "^1.8.1"
+    "when": "1.8.1"
   },
   "devDependencies": {
     "grunt": ">=0.4.5",
