@@ -54,6 +54,7 @@ module.exports = function( grunt ) {
       testCaseAbs: {
         options: {
           rel: 'test/case/',
+          cdnurl: 'http://s3.aws.com/testdelete/',
           truncateHash: 6,
           manifest: 'temp/testManifestAbs.json',
           // force serialization of files so their order won't change on the
