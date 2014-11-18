@@ -570,6 +570,9 @@ var assetUrl = assets.asset('/img/logo.png');
 
 ## Release History
 
+- **v0.2.0**, *18 Nov 2014*
+  - Moved Grunt to `peerDependencies`.
+  - Upgraded all dependent packages to latest (except "when").
 - **v0.1.6**, *26 Jul 2013*
   - Bug fix for file created with `-undefined` hash, thanks [Younes](https://github.com/interactive-object).
 - **v0.1.5**, *21 Jul 2013*
