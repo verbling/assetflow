@@ -570,7 +570,7 @@ var assetUrl = assets.asset('/img/logo.png');
 
 ## Release History
 
-- **v0.2.0**, *18 Nov 2014*
+- **v0.2.1**, *18 Nov 2014*
   - Moved Grunt to `peerDependencies`.
   - Upgraded all dependent packages to latest (except "when").
 - **v0.1.6**, *26 Jul 2013*
