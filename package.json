@@ -30,9 +30,11 @@
   "scripts": {
     "test": "grunt test"
   },
+  "peerDependencies": {
+    "grunt": ">=0.4.0"
+  },
   "dependencies": {
     "when": "~1.8.1",
-    "grunt": "~0.4.0",
     "grunt-ss-helpers": "0.0.9",
     "collections": "~0.1.15",
     "grunt-string-replace": "https://github.com/thanpolas/grunt-string-replace/tarball/7e6087974025bb5067f579f1124da493fce3527a",
@@ -46,6 +48,7 @@
     "grunt-s3": "~0.2.0-alpha.2"
   },
   "devDependencies": {
+    "grunt": ">=0.4.0",
     "grunt-mocha-test": "~0.6.1",
     "chai": "~1.7.2",
     "sinon": "~1.7.3",
