@@ -570,6 +570,8 @@ var assetUrl = assets.asset('/img/logo.png');
 
 ## Release History
 
+- **v0.2.2**, *05 Feb 2015*
+  - Properly require Collections package.
 - **v0.2.1**, *18 Nov 2014*
   - Moved Grunt to `peerDependencies`.
   - Upgraded all dependent packages to latest (except "when").
