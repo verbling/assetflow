@@ -570,6 +570,8 @@ var assetUrl = assets.asset('/img/logo.png');
 
 ## Release History
 
+- **v0.2.5**, *21 May 2015*
+  - Downgrade grunt-s3 t0 0.1.0.
 - **v0.2.4**, *21 May 2015*
   - Downgrade grunt-s3 to 0.2.0-alpha.2.
 - **v0.2.3**, *21 May 2015*
