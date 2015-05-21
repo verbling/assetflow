@@ -570,6 +570,8 @@ var assetUrl = assets.asset('/img/logo.png');
 
 ## Release History
 
+- **v0.2.6**, *21 May 2015*
+  - Lol, found the required dep it's grunt-s3 0.2.0-alpha.3.
 - **v0.2.5**, *21 May 2015*
   - Downgrade grunt-s3 t0 0.1.0.
 - **v0.2.4**, *21 May 2015*
