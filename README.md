@@ -570,6 +570,9 @@ var assetUrl = assets.asset('/img/logo.png');
 
 ## Release History
 
+- **v0.2.3**, *21 May 2015*
+  - Now reports on S3 upload error
+  - Points to a fork of grunt-s3 package with updated packages for node 0.12.
 - **v0.2.2**, *05 Feb 2015*
   - Properly require Collections package.
 - **v0.2.1**, *18 Nov 2014*
