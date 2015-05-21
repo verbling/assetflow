@@ -37,7 +37,7 @@
     "async": "~0.9.0",
     "collections": "~1.2.1",
     "config": "~1.8.1",
-    "grunt-s3": "0.2.0-alpha.3",
+    "grunt-s3": "git+https://github.com/thanpolas/grunt-s3.git",
     "grunt-ss-helpers": "0.0.9",
     "grunt-string-replace": "https://github.com/thanpolas/grunt-string-replace/tarball/7e6087974025bb5067f579f1124da493fce3527a",
     "knox": "~0.9.1",
