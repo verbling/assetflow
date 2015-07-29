@@ -570,6 +570,8 @@ var assetUrl = assets.asset('/img/logo.png');
 
 ## Release History
 
+- **v0.2.8**, *29 Jul 2015*
+  - Allow trailing slash if no CDN is present.
 - **v0.2.7**, *22 May 2015*
   - The saga continues with grunt-s3.
 - **v0.2.6**, *21 May 2015*
