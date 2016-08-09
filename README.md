@@ -570,6 +570,9 @@ var assetUrl = assets.asset('/img/logo.png');
 
 ## Release History
 
+- **v1.0.0**, *9 Aug 2016*
+  - Compatible with Grunt 1.0.
+  - Replaced grunt.util._ with actual underscore package.
 - **v0.2.8**, *29 Jul 2015*
   - Allow trailing slash if no CDN is present.
 - **v0.2.7**, *22 May 2015*
