@@ -44,6 +44,7 @@
     "pace": "0.0.4",
     "regexp-quote": "0.0.0",
     "timely": "0.1.0",
+    "underscore": "1.8.3",
     "when": "1.8.1",
     "yaml": "~0.2.3"
   },
