@@ -30,9 +30,6 @@
   "scripts": {
     "test": "grunt test"
   },
-  "peerDependencies": {
-    "grunt": ">=0.4.5"
-  },
   "dependencies": {
     "async": "~1.4.0",
     "collections": "~1.2.3",
