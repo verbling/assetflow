@@ -26,9 +26,9 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "async": "~1.4.0",
-    "collections": "~1.2.3",
-    "config": "~1.14.0",
+    "async": "^2.1.2",
+    "collections": "^5.0.5",
+    "config": "^1.24.0",
     "grunt-s3": "git+https://github.com/thanpolas/grunt-s3.git",
     "grunt-ss-helpers": "0.0.9",
     "grunt-string-replace": "https://github.com/thanpolas/grunt-string-replace/tarball/7e6087974025bb5067f579f1124da493fce3527a",
@@ -37,16 +37,16 @@
     "regexp-quote": "0.0.0",
     "underscore": "1.8.3",
     "when": "1.8.1",
-    "yaml": "~0.2.3"
+    "yaml": "^0.3.0"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
     "grunt": "~0.4.5",
-    "grunt-mocha-test": "~0.12.7",
-    "chai": "~3.2.0",
-    "sinon": "~1.15.4",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-contrib-clean": "~0.6.0",
-    "grunt-release": "~0.13.0"
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-mocha-test": "^0.13.2",
+    "grunt-release": "^0.14.0",
+    "sinon": "^1.17.6"
   },
   "keywords": [
     "gruntplugin",
