@@ -207,7 +207,7 @@ getobject@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/getobject/-/getobject-0.1.0.tgz#047a449789fa160d018f5486ed91320b6ec7885c"
 
-glob@7.0.5, glob@^7.0.0:
+glob@7.0.5:
   version "7.0.5"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.0.5.tgz#b4202a69099bbb4d292a7c1b95b6682b67ebdc95"
   dependencies:
@@ -302,21 +302,21 @@ grunt-lib-contrib@~0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/grunt-lib-contrib/-/grunt-lib-contrib-0.4.0.tgz#76883e30a2149b7fc940d00cff8ddc6b4a3342f9"
 
-grunt-mocha-test@^0.13.2:
-  version "0.13.2"
-  resolved "https://registry.yarnpkg.com/grunt-mocha-test/-/grunt-mocha-test-0.13.2.tgz#0f3abcc6ab543647b1effc5ab44ebd3702f0ab8c"
+grunt-mocha-test@^0.12.7:
+  version "0.12.7"
+  resolved "https://registry.yarnpkg.com/grunt-mocha-test/-/grunt-mocha-test-0.12.7.tgz#c61cdf32a6762954115fe712b983e3dd8e0c9554"
   dependencies:
-    hooker "^0.2.3"
+    hooker "~0.2.3"
     mkdirp "^0.5.0"
 
-grunt-release@^0.14.0:
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/grunt-release/-/grunt-release-0.14.0.tgz#b8d600889561966d60ffdcc06067eb015597f78d"
+grunt-release@^0.13.0:
+  version "0.13.1"
+  resolved "https://registry.yarnpkg.com/grunt-release/-/grunt-release-0.13.1.tgz#ceee71c99b8cca4c4c9d054d8f93322695e9a047"
   dependencies:
     q "^1.4.1"
-    semver "^5.1.0"
-    shelljs "^0.7.0"
-    superagent "^1.8.3"
+    semver "^4.3.6"
+    shelljs "^0.5.1"
+    superagent "^1.2.0"
 
 "grunt-s3@git+https://github.com/thanpolas/grunt-s3.git":
   version "0.2.0-alpha.3"
@@ -371,7 +371,7 @@ has-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-1.0.0.tgz#9d9e793165ce017a00f00418c43f942a7b1d11fa"
 
-hooker@^0.2.3, hooker@~0.2.3:
+hooker@~0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/hooker/-/hooker-0.2.3.tgz#b834f723cc4a242aa65963459df6d984c5d3d959"
 
@@ -393,10 +393,6 @@ inherits@1:
 inherits@2, inherits@2.0.1, inherits@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.1.tgz#b17d08d326b4423e568eff719f91b0b1cbdf69f1"
-
-interpret@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.0.1.tgz#d579fb7f693b858004947af39fa0db49f795602c"
 
 isarray@0.0.1:
   version "0.0.1"
@@ -633,12 +629,6 @@ readable-stream@1.0.27-1:
     isarray "0.0.1"
     string_decoder "~0.10.x"
 
-rechoir@^0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/rechoir/-/rechoir-0.6.2.tgz#85204b54dba82d5742e28c96756ef43af50e3384"
-  dependencies:
-    resolve "^1.1.6"
-
 reduce-component@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/reduce-component/-/reduce-component-1.0.1.tgz#e0c93542c574521bea13df0f9488ed82ab77c5da"
@@ -646,10 +636,6 @@ reduce-component@1.0.1:
 regexp-quote@0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/regexp-quote/-/regexp-quote-0.0.0.tgz#1e0f4650c862dcbfed54fd42b148e9bb1721fcf2"
-
-resolve@^1.1.6:
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.1.7.tgz#203114d82ad2c5ed9e8e0411b3932875e889e97b"
 
 rimraf@~2.2.1, rimraf@~2.2.8:
   version "2.2.8"
@@ -663,17 +649,13 @@ sax@>=0.6.0:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.1.tgz#7b8e656190b228e81a66aea748480d828cd2d37a"
 
-semver@^5.1.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
+semver@^4.3.6:
+  version "4.3.6"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-4.3.6.tgz#300bc6e0e86374f7ba61068b5b1ecd57fc6532da"
 
-shelljs@^0.7.0:
-  version "0.7.5"
-  resolved "https://registry.yarnpkg.com/shelljs/-/shelljs-0.7.5.tgz#2eef7a50a21e1ccf37da00df767ec69e30ad0675"
-  dependencies:
-    glob "^7.0.0"
-    interpret "^1.0.0"
-    rechoir "^0.6.2"
+shelljs@^0.5.1:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/shelljs/-/shelljs-0.5.3.tgz#c54982b996c76ef0c1e6b59fbdc5825f5b713113"
 
 sigmund@~1.0.0:
   version "1.0.1"
@@ -696,7 +678,7 @@ string_decoder@~0.10.x:
   version "0.10.31"
   resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-0.10.31.tgz#62e203bc41766c6c28c9fc84301dab1c5310fa94"
 
-superagent@^1.8.3:
+superagent@^1.2.0:
   version "1.8.4"
   resolved "https://registry.yarnpkg.com/superagent/-/superagent-1.8.4.tgz#68b2c8a400f1753ddb39410906899e42f420fd3a"
   dependencies:
