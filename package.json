@@ -46,6 +46,7 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-mocha-test": "^0.13.2",
     "grunt-release": "^0.14.0",
+    "mocha": "^3.1.2",
     "sinon": "^1.17.6"
   },
   "keywords": [
